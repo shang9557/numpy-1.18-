@@ -70,7 +70,7 @@ description: 版本：1.18.dev0     更新时间：2019.7.16
 * 构建可安装的C库
 * 转换.src文件
 
-### Numpy Distutils -用户指导
+### Numpy Distutils -用户指南
 
 * Scipy 结构体
 * Scipy包的要求
@@ -100,6 +100,16 @@ description: 版本：1.18.dev0     更新时间：2019.7.16
 
 * numpy.i:numpy的一个SWIG接口文件
 * 测试numpy.i类型图
+
+### _**确认**_
+
+本手册的大部分内容源于Tracis E.Oliphant的书籍 [numpy指南](https://archive.org/details/NumPyBook) \(于2008年8月慷慨进入公共领域\).许多函数的参考文档都是由NumPy的众多贡献者和开发者编写的。
+
+
+
+注:本文属于个人译文  原文地址是[https://www.numpy.org/devdocs/reference/index.html](https://www.numpy.org/devdocs/reference/index.html)
+
+
 
 
 
