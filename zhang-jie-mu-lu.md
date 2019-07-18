@@ -6,7 +6,7 @@ description: 版本：1.18.dev0     更新时间：2019.7.16
 
 这个参考手册详细介绍了numpy中的功能，模块和对象。描述了他们是什么以及他们做了什么。要了解如何使用numpy，请参阅[numpy用户指南](https://www.numpy.org/devdocs/user/index.html#user)
 
-### 数组对象
+### [数组对象](shu-zu-dui-xiang.md)
 
 * 多维数组\(ndarray\) 
 * 标量
