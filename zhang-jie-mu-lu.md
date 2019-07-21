@@ -8,7 +8,7 @@ description: 版本：1.18.dev0     更新时间：2019.7.16
 
 ### [数组对象](shu-zu-dui-xiang.md)
 
-* 多维数组\(ndarray\) 
+* [多维数组\(ndarray\) ](duo-wei-shu-zu-ndarray.md)
 * 标量
 * 数据类型对象\(dtype\)
 * 索引
