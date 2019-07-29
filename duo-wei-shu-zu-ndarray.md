@@ -65,3 +65,12 @@ ndarray 的实例是由计算机的连续一维段\(由数组或其他对象拥�
 
 ![](.gitbook/assets/image%20%282%29.png)
 
+其中 ![d\_j](https://numpy.org/devdocs/_images/math/5e6cfb16a1d0565098e1a35072ef6fbfef092db3.svg) _= self.shape\[j\]_.
+
+C和Fortran 顺序都是连续的，即，单端存储器布局，其中存储器块的每个部分都可以通过索引的某种组合来访问。
+
+而具有相应标志集合的c风格和Fortran风格的连续数组可以解决上述问题，实际步幅可能不同。这可能发生在两种情况下：
+
+1. 如果self.shape \[k\] == 1那么对于任何合法索引索引\[k\] == 0.这意味着在偏移量n\_k = 0的公式中，因此s\_k n\_k = 0，s\_k = self.strides的值 \[k\]是任意的。
+2. 如果数组没有元素（self.size == 0），则没有合法索引，并且从不使用步幅。 任何没有元素的数组都可以被认为是C风格和Fortran风格的连续数组。
+
