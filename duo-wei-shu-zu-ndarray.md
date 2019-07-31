@@ -78,3 +78,19 @@ C和Fortran 顺序都是连续的，即，单端存储器布局，其中存储�
 
 如果所有元素的内存偏移量和基本偏移量本身是self.itemsize的倍数，则认为数组是对齐的。了解内存对齐可以在大部分硬件上实现更好的性能。
 
+{% hint style="info" %}
+注意：
+
+默认情况下尚未应用第一点和第二点。从Numpy1.8.0开始，只有在构建Numpy时定义了环境变量NPY\_RELAXED\_STARDES\_CHECKING=1时才会一致的应用它们。事实上这将成为默认值。
+
+你可以通过查看np.ones\(\(10,1\),order='C'\)的值来检查构建numpy时是否启用了此选项。如果flags.f\_contiguous的值是True，那么你的Numpy已经放宽了步幅检查功能。
+{% endhint %}
+
+{% hint style="danger" %}
+警告:
+
+对于C风格的连续数据，它们不认为self.strides\[-1\]==self.itemsize;对于Fortran风格的连续数组，它们认为self.strides\[0\]==self.itemsize是正确的。
+{% endhint %}
+
+
+
