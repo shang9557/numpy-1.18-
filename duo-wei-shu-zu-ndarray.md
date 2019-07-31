@@ -92,5 +92,11 @@ C和Fortran 顺序都是连续的，即，单端存储器布局，其中存储�
 对于C风格的连续数据，它们不认为self.strides\[-1\]==self.itemsize;对于Fortran风格的连续数组，它们认为self.strides\[0\]==self.itemsize是正确的。
 {% endhint %}
 
+除非另有说明，否则ndarray中的数据是按在 row-major\(C\)顺序排列的，例如，基本数组切片通常会以不同的方案生成视图。
 
+{% hint style="info" %}
+注意：
+
+numpy中的几种算法适用于任意跨步数组。但是，一些算法需要单段数组，当不规则的跨步数组传递给这样的算法时，副本会自动生成
+{% endhint %}
 
